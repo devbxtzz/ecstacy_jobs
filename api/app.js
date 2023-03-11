@@ -5,19 +5,22 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 var cors = require('cors');
-const cookieParser = require("cookie-parser");
-const errorHandler = require("./middleware/error");
+
+
 
 
 // import routes
 const authRoutes = require('./routes/authRoutes');
+
+const cookieParser = require("cookie-parser");
+const errorHandler = require("./middleware/error");
 
 //database connection
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-    .then(() => console.log("Connected to MongoDB !!!"))
+    .then(() => console.log("DB connected"))
     .catch((err) => console.log(err));
 
 //MIDDLEWARE
@@ -41,7 +44,7 @@ app.use('/api', authRoutes);
 app.use(errorHandler);
 
 //port
-const port = process.env.PORT || 9000
+const port = process.env.PORT || 8001
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);

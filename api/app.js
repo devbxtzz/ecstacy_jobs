@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-    .then(() => console.log("DB connected"))
+    .then(() => console.log("DB connection successful!!"))
     .catch((err) => console.log(err));
 
 //MIDDLEWARE
@@ -35,9 +35,6 @@ app.use(cors());
 
 
 //ROUTES MIDDLEWARE
-// app.get('/', (req, res) => {
-//     res.send("Hello from Node Js");
-// })
 app.use('/api', authRoutes);
 
 // error middleware

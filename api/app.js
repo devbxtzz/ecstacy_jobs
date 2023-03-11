@@ -11,6 +11,7 @@ var cors = require('cors');
 
 // import routes
 const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 const cookieParser = require("cookie-parser");
 const errorHandler = require("./middleware/error");
@@ -20,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-    .then(() => console.log("DB connection successful!!"))
+    .then(() => console.log("Connection to MongoDB successful!!!"))
     .catch((err) => console.log(err));
 
 //MIDDLEWARE
@@ -36,12 +37,13 @@ app.use(cors());
 
 //ROUTES MIDDLEWARE
 app.use('/api', authRoutes);
+app.use('/api', userRoutes);
 
 // error middleware
 app.use(errorHandler);
 
 //port
-const port = process.env.PORT || 8001
+const port = process.env.PORT || 9000
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);

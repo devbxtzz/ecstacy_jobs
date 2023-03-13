@@ -1,12 +1,12 @@
 {
-  "name": "api",
+  "name": "client",
   "version": "1.0.0",
-  "description": "job board",
+  "description": "job portal",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "tonny batya",
+  "author": "Emmann",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

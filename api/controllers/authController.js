@@ -1,4 +1,3 @@
-
 const User = require('../models/userModel');
 const ErrorResponse = require('../utils/errorResponse');
 
@@ -80,7 +79,3 @@ exports.userProfile = async (req, res, next) => {
         user
     })
 }
-
-
-
-

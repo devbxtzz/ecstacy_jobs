@@ -13,7 +13,7 @@ const Footer = () => {
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
-                <Box component='span' sx={{ color: palette.primary.main }}>All rights reserved! 2023.</Box>
+                <Box component='span' sx={{ color: palette.primary.main }}>Ecstacy Jobs 2023.</Box>
 
             </Box>
         </>

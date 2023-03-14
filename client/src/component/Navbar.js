@@ -15,7 +15,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
 
-const pages = ['Home', 'Log In'];
+const pages = ['Home', 'Sign In'];
 
 
 function Navbar() {
@@ -61,7 +61,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        JOB PORTAL
+                       Ecstacy Jobs
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -117,7 +117,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        JOB PORTAL
+                        Ecstacy Jobs
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {/* menu desktop */}
